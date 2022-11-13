@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+   
+  .app button {
+   width: 90px;
+   height: 20px;
+   background-color: rgb(172, 243, 219);
+   border-radius: 4px;
+  }
+  .app input{
+    border-radius: 3px;
+    border-color: rgb(221, 171, 153);
+  }
+  .app input:hover{
+    border-color: red;
+  }
+  .name{
+    color: green;
+  }
+  .button{
+    color: blue;
+  }
+  .text{
+    color: coral;
+    font-style: italic;
+    font-size: 0.6cm;
+  }
