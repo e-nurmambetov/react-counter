@@ -1,44 +1,21 @@
 import React, {useState} from 'react';
+import Counter from './components/Counter';
+import ClassCounter from './components/ClassCounter';
 import './styles/App.css';
+import PostItem from './components/PostItem';
 
 function App() {
-  const [likes, setLikes] = useState(5);
-  const [value, setValue] = useState('');
-
-  function increment() {
-    setLikes(likes + 1)
-  };
-
-  function decrement() {
-    setLikes(likes - 1)
-  };
-
-  function newTitle(e) {
-    // e.preventDefault();
-    setValue('');
-  }
+      const [value, setValue] = useState('Text on Input')
   return (
-    <div className='app'>
-      
-
-      <input 
-      onChange={e => setValue(e.target.value)}
-      type='text'
-      placeholder='ФИО'
-      value={value}
-      />
-      <button onClick={newTitle}>Press</button>
-      <h1 className='name'>
-        Name: <div className='text'>{value}</div>
-        </h1>
-      
-      
-      <h1 className='button'>{likes}</h1>
-      <button onClick={increment}>increment</button>
-      <button onClick={decrement}>decrement</button>
-      
+    <div className='App'>
+     <PostItem post={{id: 1, title: 'JavaScript', body: 'Description'}}/>
+     <PostItem post={{id: 2, title: 'JavaScript', body: 'Description'}}/>
+     <PostItem post={{id: 3, title: 'JavaScript', body: 'Description'}}/>
+     <PostItem post={{id: 4, title: 'JavaScript', body: 'Description'}}/>
+     <PostItem post={{id: 5  , title: 'JavaScript', body: 'Description'}}/>
+     
     </div>
   );
-}
+};
 
 export default App;
